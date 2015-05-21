@@ -1,0 +1,116 @@
+\documentclass[letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[caption = false]{subfig}
+\usepackage{float}
+\usepackage{enumerate}
+
+\title{Complex Networks, HW3}
+\author{Andrés F. Lamilla}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Code}
+For this code I used networkx library for python. The code is in the file sis\_epidemic\_spreading.py and it was test on a linux machine using ubuntu 14.04. It's necessary to install networkx and matplotlib librarys for python. The requirements are in requirements.txt file and can be installed using pip install -r requirements.txt
+
+\section{Results}
+I got the results for three differents graph models (Barabasi Albert, Erdos Renyi and Random network) with 500 nodes. I try to do it for more nodes but it took to much time, several days without finish. The mu values tested were 0.1, 0.5 and 0.9. the number of repetitions Nrep = 100, initial fraction of infected nodes p0 = 0.2, maximum number of time steps of each simulation Tmax = 1000, number of steps of the transitory Ttrans = 900.
+
+\subsection{Barabasi Albert}
+Number of edges to attach from a new node to existing nodes, m = 10.
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images_transitions/SIS_Barabasi_Albert_N_500_58.png}
+  \caption{Barabasi transitions}
+  \label{fig:1}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Barabasi_Albert_0.png}
+  \caption{Barabasi mu=0.1}
+  \label{fig:2}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Barabasi_Albert_1.png}
+  \caption{Barabasi mu=0.5}
+  \label{fig:3}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Barabasi_Albert_2.png}
+  \caption{Barabasi mu=0.9}
+  \label{fig:4}
+\end{figure}
+
+\subsection{Erdos Renyi}
+Probability for edge creation, p = 0.4.
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images_transitions/SIS_Erdos_Renyi_N_500_58.png}
+  \caption{Erdos Renyi transitions}
+  \label{fig:5}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Erdos_Renyi_3.png}
+  \caption{Erdos Renyi mu=0.1}
+  \label{fig:6}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Erdos_Renyi_4.png}
+  \caption{Erdos Renyi mu=0.5}
+  \label{fig:7}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Erdos_Renyi_5.png}
+  \caption{Erdos Renyi mu=0.9}
+  \label{fig:8}
+\end{figure}
+
+\subsection{Random network}
+Degree, d = 10.
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images_transitions/SIS_Random_network_N_500_58.png}
+  \caption{Random network transitions}
+  \label{fig:9}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Random_network_6.png}
+  \caption{Random network mu=0.1}
+  \label{fig:10}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Random_network_7.png}
+  \caption{Random network mu=0.5}
+  \label{fig:11}
+\end{figure}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=12cm]{images/SIS_Random_network_8.png}
+  \caption{Random network mu=0.9}
+  \label{fig:12}
+\end{figure}
+
+\end{document}
